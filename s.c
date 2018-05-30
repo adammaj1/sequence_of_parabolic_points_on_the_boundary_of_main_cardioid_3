@@ -4,7 +4,7 @@
   c console progam
   
   
-  gcc s.c -Wall
+  gcc s.c =lm -Wall
   ./a.out
   
   
@@ -22,6 +22,12 @@ git push -u origin master
 
 
 #include <stdio.h>
+#include <math.h> // M_PI; needs -lm also 
+#include <complex.h>
+
+
+ double twopi = 2.0*M_PI;
+
 
 /*
 
@@ -53,7 +59,7 @@ double Give_t(int nMax){
 	}
 	 
 	t = (double)p/q; // compute floating point value 
-	printf( "for n = %2d  p/q = %18Ld / %18Ld  \tt =  %.16f \n",n, p, q, t); 
+	printf( "for n = %2d  p/q = %18Ld / %18Ld  \tt =  %.16f\t",n, p, q, t); 
 	
 	
 	
@@ -67,7 +73,25 @@ double Give_t(int nMax){
 
 
 
+/* computes c on the boundary of Main cardioid of Mandelbrot set */
+complex double Give_c(  double InternalAngleInTurns )
+{
+  
+  complex double w;
+  complex double c; 
+  
+  
+  double InternalRadius = 1.0; // only boundary points
+  
+  double t = InternalAngleInTurns *twopi; // from turns to radians
+  w = InternalRadius*cexp(I*t); // point of the unit circle 
+  
+  // main cardioid
+  c = w/2 - w*w/4;
+  printf("\tc = (%+.16f ; %+.16f)\n",creal(c), cimag(c)); 
 
+  return c;
+}
 
 
 
@@ -80,10 +104,14 @@ double Give_t(int nMax){
 int main()
 {
 
-	int n; 
-	
-	for (n = 1; n < 17; n++)
-		Give_t(n);
+	int n;
+	double t; 
+		
+	for (n = 1; n < 17; n++){
+		t = Give_t(n);
+		Give_c(t);
+		
+		}
 		
 	 	
   
