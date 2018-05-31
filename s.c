@@ -4,7 +4,12 @@
   c console progam
   
   
-  gcc s.c =lm -Wall
+  
+  gcc s.c -lm -Wall
+  
+gcc optimisation: 
+  gcc s.c -lm -Wall -march=native -O2  
+  
   ./a.out
   time ./a.out
   
@@ -35,7 +40,7 @@ git push -u origin master
 // ------------ global variables, see also give_t  ==================================================
 
 double i_Max ; // Number of points to draw = iPeriodChild*i_Max_multiplier; see setup 
-unsigned long long int i_Max_multiplier =  10000; //00000; 
+unsigned long long int i_Max_multiplier =  1000; //00000; 
 
 
 
@@ -129,12 +134,12 @@ double Give_t(int nMax){
 	}
 	 
 	t = (double)p/q; // compute floating point value 
-	printf( "for n = %2d  p/q = %18Ld / %18Ld  \tt =  %.16f\t",n, p, q, t); 
+	printf( "for n = %2d  p/q = %8Ld / %8Ld  \tt =  %.16f\t",n, p, q, t); 
 	
 	// !!!! global variable setup for each n 
 	iPeriodChild = q; 
 	i_Max = iPeriodChild*i_Max_multiplier;
-	printf("number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = %.0f\n", i_Max);
+	
 	// !!!!!
 	
 	return t; 
@@ -161,8 +166,8 @@ complex double Give_c(  double InternalAngleInTurns )
   
   // main cardioid
   c = w/2 - w*w/4;
-  printf("\tc = (%+.16f ; %+.16f)\n",creal(c), cimag(c)); 
-
+  printf("\tc = (%+.16f ; %+.16f)",creal(c), cimag(c)); 
+  printf("\tnumber of point to draw = i_Max = q*i_Max_multiplier = %.0f\n", i_Max);
   return c;
 }
 

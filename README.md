@@ -210,7 +210,7 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 
 
-Time ( for periods 1-7) is proportional to i_Max_multiplier : 
+Time ( for periods 1-7) without gcc optimisation is proportional to i_Max_multiplier : 
 
 
 | i_Max_multiplier | time(1-7)|
@@ -220,6 +220,15 @@ Time ( for periods 1-7) is proportional to i_Max_multiplier :
 |              100 |      0m27| 
 |             1000 |      4m45|
 |            10000 |     47m00|
+
+
+### gcc optimisation
+* gcc s.c -lm -Wall gives: 4m37,663s
+* gcc s.c -lm -Wall -march=native -O2 gives: 2m34,283s so it is almost 2 times faster!
+
+
+
+
 
 
 ## errors

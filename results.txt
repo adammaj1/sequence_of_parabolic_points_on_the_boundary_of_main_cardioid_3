@@ -1,3 +1,90 @@
+==================== gcc optimisation: -march=native -O2 ==========================================
+ gcc s.c -lm -Wall
+ 
+ 
+a@zelman:~/c/julia/parabolic/1over3/sequence2/test$ time ./a.out
+memory is OK 
+Numerical approximation of parabolic critical orbit parabolic for fc(z)= z^2 + c 
+Rectangle of the dynamic plane description:
+	center z = (-0.2500000000000000 ; 0.4330127018922190) and radius = 0.4500000000000000
+
+	corners :-0.7000000000000000 < creal(z) < 0.2000000000000000 and -0.0169872981077810 < cimag(z) < 0.8830127018922190
+
+i_Max_multiplier = 1000 
+Image Width = 0.900000 
+PixelWidth = 0.000901 
+Aspect ratio of image  = 1.0000000000000000
+for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 10000
+	c = (+0.0477457514062632 ; +0.6224745712206950)
+File 1_1000.pgm saved.  comment =   
+for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 100000
+	c = (-0.1069201383061086 ; +0.6492353213974356)
+File 2_1000.pgm saved.  comment =   
+for n =  3  p/q =                333 /               1000  	t =  0.3330000000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 1000000
+	c = (-0.1231867522608051 ; +0.6495162048804539)
+File 3_1000.pgm saved.  comment =   
+for n =  4  p/q =               3333 /              10000  	t =  0.3333000000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 10000000
+	c = (-0.1248186255500050 ; +0.6495190243483838)
+File 4_1000.pgm saved.  comment =   
+for n =  5  p/q =              33333 /             100000  	t =  0.3333300000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 100000000
+	c = (-0.1249818620611921 ; +0.6495190525534192)
+File 5_1000.pgm saved.  comment =   
+for n =  6  p/q =             333333 /            1000000  	t =  0.3333330000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 1000000000
+	c = (-0.1249981862011840 ; +0.6495190528354798)
+File 6_1000.pgm saved.  comment =   
+for n =  7  p/q =            3333333 /           10000000  	t =  0.3333333000000000	number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 10000000000
+	c = (-0.1249998186200689 ; +0.6495190528383005)
+File 7_1000.pgm saved.  comment =   
+
+real	4m37,663s
+user	4m37,656s
+sys	0m0,012s
+
+
+
+
+
+gcc s.c -lm -Wall -march=native -O2
+
+
+a@zelman:~/c/julia/parabolic/1over3/sequence2/test$ time ./a.out
+memory is OK 
+Numerical approximation of parabolic critical orbit parabolic for fc(z)= z^2 + c 
+Rectangle of the dynamic plane description:
+	center z = (-0.2500000000000000 ; 0.4330127018922190) and radius = 0.4500000000000000
+
+	corners :-0.7000000000000000 < creal(z) < 0.2000000000000000 and -0.0169872981077810 < cimag(z) < 0.8830127018922190
+
+i_Max_multiplier = 1000 
+Image Width = 0.900000 
+PixelWidth = 0.000901 
+Aspect ratio of image  = 1.0000000000000000
+for n =  1  p/q =        3 /       10  	t =  0.3000000000000000		c = (+0.0477457514062632 ; +0.6224745712206950)	number of point to draw = i_Max = q*i_Max_multiplier = 10000
+File t1_1000.pgm saved.  comment =   
+for n =  2  p/q =       33 /      100  	t =  0.3300000000000000		c = (-0.1069201383061086 ; +0.6492353213974356)	number of point to draw = i_Max = q*i_Max_multiplier = 100000
+File t2_1000.pgm saved.  comment =   
+for n =  3  p/q =      333 /     1000  	t =  0.3330000000000000		c = (-0.1231867522608051 ; +0.6495162048804539)	number of point to draw = i_Max = q*i_Max_multiplier = 1000000
+File t3_1000.pgm saved.  comment =   
+for n =  4  p/q =     3333 /    10000  	t =  0.3333000000000000		c = (-0.1248186255500050 ; +0.6495190243483838)	number of point to draw = i_Max = q*i_Max_multiplier = 10000000
+File t4_1000.pgm saved.  comment =   
+for n =  5  p/q =    33333 /   100000  	t =  0.3333300000000000		c = (-0.1249818620611921 ; +0.6495190525534192)	number of point to draw = i_Max = q*i_Max_multiplier = 100000000
+File t5_1000.pgm saved.  comment =   
+for n =  6  p/q =   333333 /  1000000  	t =  0.3333330000000000		c = (-0.1249981862011840 ; +0.6495190528354798)	number of point to draw = i_Max = q*i_Max_multiplier = 1000000000
+File t6_1000.pgm saved.  comment =   
+for n =  7  p/q =  3333333 / 10000000  	t =  0.3333333000000000		c = (-0.1249998186200689 ; +0.6495190528383005)	number of point to draw = i_Max = q*i_Max_multiplier = 10000000000
+File t7_1000.pgm saved.  comment =   
+
+real	2m34,283s
+user	2m34,283s
+sys	0m0,004s
+
+
+
+
+
+==================== 1-7 double without gcc optimisation ========================
+
+
 memory is OK 
 Numerical approximation of parabolic critical orbit parabolic for fc(z)= z^2 + c 
 Rectangle of the dynamic plane description:
