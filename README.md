@@ -25,9 +25,11 @@ see also :
 # Images
 Names: n_{i_Max_multiplier}.png
 
-![7_10000.png it means n=7 i_Max_multiplier = 10 000 ](7_10000.png)
 
 
+![7_10000.png it means n=7 i_Max_multiplier = 10 000 ](7_10000.png)  
+
+Image above is 7_10000.png. It means n=7 i_Max_multiplier = 10 000
 
 
 
