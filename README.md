@@ -154,6 +154,12 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 # results
 
+## precision
+* double is sufficient for computing t and c up to n = 16
+* double is sufficient for drawing n from 1 to 7 and fails for drawing n= 8 and above ( see errors section)
+
+
+
 ## time
 
 
