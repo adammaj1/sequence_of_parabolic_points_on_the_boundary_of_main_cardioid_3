@@ -34,7 +34,7 @@ git push -u origin master
 
 // ------------ global variables, see also give_t  ==================================================
 
-double i_Max ; // = iPeriodChild*1.0; see setup 
+double i_Max ; // Number of points to draw = iPeriodChild*i_Max_multiplier; see setup 
 unsigned long long int i_Max_multiplier =  10000; //00000; 
 
 
@@ -134,6 +134,7 @@ double Give_t(int nMax){
 	// !!!! global variable setup for each n 
 	iPeriodChild = q; 
 	i_Max = iPeriodChild*i_Max_multiplier;
+	printf("number of point to draw = i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = %.0f\n", i_Max);
 	// !!!!!
 	
 	return t; 

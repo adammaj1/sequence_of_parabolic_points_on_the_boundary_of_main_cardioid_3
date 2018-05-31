@@ -32,6 +32,7 @@ Names: n_{i_Max_multiplier}.png
 Image above is 7_10000.png. It means:
 * n=7 
 * i_Max_multiplier = 10 000
+* number of point on the image is i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 10 000 000 * 10 000 = 100 000 000 = 10^8
 
 
 
@@ -51,7 +52,17 @@ There are :
 
 
 transformations:
-* z -> (ix,iy) -> i
+* world to screen: z -> (ix,iy) -> i
+
+
+## critical orbit
+Critical orbit has a form of q-arm deformed star. To end drawing with similar distance to fixed point the number of points to draw ( i_Max) is proportional to number of arms q: 
+
+```c
+iPeriodChild = q; 
+i_Max = iPeriodChild*i_Max_multiplier;
+```
+
 
 
 
