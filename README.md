@@ -1,11 +1,30 @@
 
 
+#TOC
+* description
+* images
+* algorithms
+* functions
+* results
+* Licence
+* Technical notes
+
+
+
 # description	
 
 sequence of parabolic points on the boundary of main cardioid tending to 1/3 
 
 see:
 * [wikibooks](https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabolic_points_on_the_boundary_of_main_cardioid)
+
+
+# algorithms
+* creating image
+* finding parameter c
+* critical orbit = forward iteration of critical point
+
+## creating image
 
 
 
@@ -132,11 +151,28 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 ```
 
 
+
+# results
+
+## time
+
+| n | period | time
+| --------: | --------: | --------: |
+|  1   |    10| |
+|  2   |    100| | 
+|  3 | 1000| |
+
+
+
 # License
 
 This project is licensed under the  Creative Commons Attribution-ShareAlike 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details  
 
+
 # technical notes
+
+It is file in a Markdown format ( extension md )
+
 GitLab uses:
 * the Redcarpet Ruby library for [Markdown processing](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md)
 * KaTeX to render [math written with the LaTeX syntax](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md), but [only subset](https://khan.github.io/KaTeX/function-support.html)
