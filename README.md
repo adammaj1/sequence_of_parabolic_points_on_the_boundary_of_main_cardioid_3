@@ -164,6 +164,16 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 
 
+
+| i_Max_multiplier | time|
+| --------: |  --------: |
+|  1   |    0m28| 
+|  10   |    0m32| 
+|  100 | 0m58| 
+| 1000 | 5m10|
+| 10000 | 47m38|
+
+
 # License
 
 This project is licensed under the  Creative Commons Attribution-ShareAlike 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details  
