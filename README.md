@@ -57,6 +57,7 @@ double Give_t(int nMax){
 
 
 Results:
+
 ```bash
 for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000 
 for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000 
@@ -108,7 +109,7 @@ complex double Give_c(  double InternalAngleInTurns )
 
 ```
 
-
+Results: 
 
 ```bash
 for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000		c = (+0.0477457514062632 ; +0.6224745712206950)
