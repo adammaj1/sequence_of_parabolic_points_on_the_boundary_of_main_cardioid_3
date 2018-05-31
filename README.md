@@ -1,19 +1,20 @@
 
 
 # TOC
-* [Intro](intro)
-* [images](images)
-* [algorithms](algorithms)
-* [functions](functions)
-* [results](results)
-* [Licence](licence)
-* [Technical notes](technical-notes)
+* [Intro](README.md#intro)
+* [images](README.md#images)
+* [algorithms](README.md#algorithms)
+* [functions](README.md#functions)
+* [results](README.md#results)
+* [Licence](README.md#licence)
+* [Technical notes](README.md#technical-notes)
 
 
 
 # Intro	
-
-sequence of parabolic points on the boundary of main cardioid tending to 1/3 
+* sequence of rational proper fractions ( on the real axis )
+* sequence of parabolic points c on the boundary of main cardioid tending to 1/3 ( on the parameter plane)
+* sequence of critical orbits ( on the dynamic plane)
 
 see also :
 * [wikibooks](https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabolic_points_on_the_boundary_of_main_cardioid)
