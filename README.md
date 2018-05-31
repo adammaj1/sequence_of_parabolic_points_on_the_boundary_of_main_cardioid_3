@@ -1,13 +1,13 @@
 
 
-#TOC
-* Intro
-* images
-* algorithms
-* functions
-* results
-* Licence
-* Technical notes
+# TOC
+* [Intro](intro)
+* [images](images)
+* [algorithms](algorithms)
+* [functions](functions)
+* [results](results)
+* [Licence](licence)
+* [Technical notes](technical-notes)
 
 
 
@@ -53,14 +53,15 @@ i_Max =  100 000 * 10 000 000 = 1000 000 000 000 = 10^12
 # algorithms
 * creating image
 * finding parameter c
-* critical orbit = forward iteration of critical point
+* complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* critical orbit = forward iteration of critical point $`z = 0`$ 
 
 
 ## creating images
 
 There are :
-* virtual 2D array with integer coordinate ix and iy
-* memory 1D array with integer coordinate, which contains color of the pixel (8 bit color = shades of gray) 
+* virtual 2D array with 2 integer coordinates: ix and iy
+* memory 1D array with one integer coordinate, which contains color of the pixel (8 bit color = shades of gray) 
 * rectangle of dynamic complex plane with complex coordinate z ( world or complex double coordinate)
 * pgm graphic file on the disc 
 
