@@ -23,7 +23,9 @@ see also :
 
 
 # Images
+Names: n_{i_Max_multiplier}.png
 
+![7_10000.png it means n=7 i_Max_multiplier = 10 000 ](7_10000.png)
 
 
 
@@ -35,6 +37,17 @@ see also :
 * critical orbit = forward iteration of critical point
 
 
+## creating images
+
+There are :
+* virtual 2D array with integer coordinate ix and iy
+* memory 1D array with integer coordinate, which contains color of the pixel (8 bit color = shades of gray) 
+* rectangle of dynamic complex plane with complex coordinate z ( world or complex double coordinate)
+* pgm graphic file on the disc 
+
+
+transformations:
+* z -> (ix,iy) -> i
 
 
 
