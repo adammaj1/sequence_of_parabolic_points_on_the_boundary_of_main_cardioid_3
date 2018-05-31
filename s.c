@@ -35,7 +35,7 @@ git push -u origin master
 // ------------ global variables, see also give_t  ==================================================
 
 double i_Max ; // = iPeriodChild*1.0; see setup 
-unsigned long long int i_Max_multiplier =  10000; 
+unsigned long long int i_Max_multiplier =  10000; //00000; 
 
 
 
@@ -66,7 +66,7 @@ double AspectRatio; // width : height  https://en.wikipedia.org/wiki/Aspect_rati
 /* world ( double) coordinate = dynamic plane */
 // center and radius : https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/plane#radius
 complex double center = -0.250000000000000  +0.433012701892219*I; // alfa fixed point
-double radius = 0.5; 
+double radius = 0.45; 
 
 // corners: https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/plane#Corners
 double ZxMin ;
@@ -86,7 +86,7 @@ unsigned char *image;
 
 
 // parabolic point = root is a common points between 2 componnets of Mandelbrot set : parent and child
-unsigned long long int iPeriodChild; // = q = denominator( Internal angle t = p/q)
+unsigned long long int iPeriodChild; // = q = denominator( Internal angle t = p/q) = number of critical orbit star's arms
 
 
 
@@ -165,6 +165,20 @@ complex double Give_c(  double InternalAngleInTurns )
 }
 
 
+int GeneralInfo()
+{
+  // diplay info messages
+  printf("Numerical approximation of parabolic critical orbit parabolic for fc(z)= z^2 + c \n");
+  printf("Rectangle of the dynamic plane description:\n\tcenter z = (%.16f ; %.16f) and radius = %.16f\n",creal(center), cimag(center), radius); 
+  printf("\n\tcorners :%.16f < creal(z) < %.16f and %.16f < cimag(z) < %.16f\n",ZxMin,ZxMax, ZyMin, ZyMax); 
+  
+  printf("\ni_Max_multiplier = %Ld \n", i_Max_multiplier);
+  printf ("Image Width = %f \n", ZxMax - ZxMin);
+  printf ("PixelWidth = %f \n", PixelWidth);
+  printf ("Aspect ratio of image  = %.16f\n", AspectRatio);
+  return 0;
+}
+
 
 // arrray functions ===============================================
 
@@ -187,7 +201,7 @@ int PlotPoint(complex double z, unsigned char A[])
   
   
 	//compute integer coordinate  
-	if ( Zx<=ZxMax && Zx>=ZxMin && Zy>=ZyMin && Zy<=ZyMax ) // check bounds, comment it if you are sure
+	if ( Zx<=ZxMax && Zx>=ZxMin && Zy>=ZyMin && Zy<=ZyMax ) // check bounds, comment it if you are sure that will be no erors 
 	// for n =  9  p/q =          333333333 /         1000000000  	t =  0.3333333330000000		c = (-0.1249999981862006 ; +0.6495190528383290) Naruszenie ochrony pamięci !!! error
 	// point z =  (-0.4365786152835205 ; -0.1839796132996155) is out of drawing rectangle 
 	//  error from DrawCriticalOrbit for i = 999999998 
@@ -343,8 +357,8 @@ int setup(){
 
 	// see also Give_t  for rest of setup
 	
-	
-	printf(" i_Max_multiplier = %Ld \n", i_Max_multiplier);
+	GeneralInfo();
+		
 	return 0;
 }
    
@@ -358,7 +372,7 @@ int main()
 	
 	setup();
 		
-	for (n = 1; n < 10; n++)
+	for (n = 1; n < 8; n++)
 		MakeImage( n);
 	 	
   
