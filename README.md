@@ -20,6 +20,7 @@ see also :
 * [definition of critical orbit ](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/def_cqp#Critical_2)
 * [images of critical orbit from commons](https://commons.wikimedia.org/wiki/Category:Critical_orbits)
 * [Repelling and attracting directions](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/r_a_directions)
+* [parabolic rays landing on fixed point](https://commons.wikimedia.org/wiki/File:Parabolic_rays_landing_on_fixed_point.ogv)
 
 
 # Images
@@ -27,14 +28,27 @@ Names: n_{i_Max_multiplier}.png
 
 
 
-![7_10000.png it means n=7 i_Max_multiplier = 10 000 ](7_10000.png)  
+![7_10000.png](7_10000.png)  
 
-Image above is 7_10000.png. It means:
+Image above is 7_10000.png. From it's name one can read:
 * n=7 
 * i_Max_multiplier = 10 000
-* number of point on the image is i_Max = iPeriodChild*i_Max_multiplier = q*i_Max_multiplier = 10 000 000 * 10 000 = 100 000 000 000 = 10^12
+* number of arms is iPeriodChild = q = 10 000 000
 
+so  number of point on the image i_Max is 
 
+i_Max =  10 000 000 * 10 000 = 100 000 000 000 = 10^11
+
+![7_100000.png](7_100000.png)  
+
+Image above is 7_100000.png. From it's name one can read:
+* n=7 
+* i_Max_multiplier = 100 000
+* number of arms is iPeriodChild = q = 10 000 000
+
+so  number of point on the image i_Max is 
+
+i_Max =  100 000 * 10 000 000 = 1000 000 000 000 = 10^12
 
 # algorithms
 * creating image
