@@ -178,6 +178,18 @@ Time ( for periods 1-9) is proportional to i_Max_multiplier :
 | 10000 | 47m38|
 
 
+## errors
+
+* for i_Max_multiplier = 10 there is 1 error: for n =  9 error from  PlotPoint function : point z =  (-0.4365786152835205 ; -0.1839796132996155) is out of drawing rectangle ;  error from DrawCriticalOrbit for i = 999999998 
+* for i_Max_multiplier = 100 there are 2 errors: above and for n =  8 error from  PlotPoint function : point z =  (+0.2509611384621441 ; +0.1911010034353226) is out of drawing rectangle; error from DrawCriticalOrbit for i = 199999993 
+* for i_Max_multiplier = 1000 there are 2 errors: the same as above
+* for i_Max_multiplier = 10000 there are 2 errors: the same as above
+
+
+Solutions:
+* use higher precision ( long double, quad double, arbitrary )
+
+
 # License
 
 This project is licensed under the  Creative Commons Attribution-ShareAlike 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details  
