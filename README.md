@@ -1,7 +1,7 @@
 
 
 #TOC
-* description
+* Intro
 * images
 * algorithms
 * functions
@@ -11,12 +11,22 @@
 
 
 
-# description	
+# Intro	
 
 sequence of parabolic points on the boundary of main cardioid tending to 1/3 
 
-see:
+see also :
 * [wikibooks](https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabolic_points_on_the_boundary_of_main_cardioid)
+* [definition of critical orbit ](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/def_cqp#Critical_2)
+* [images of critical orbit from commons](https://commons.wikimedia.org/wiki/Category:Critical_orbits)
+* [Repelling and attracting directions](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/r_a_directions)
+
+
+# Images
+
+
+
+
 
 
 # algorithms
@@ -24,7 +34,7 @@ see:
 * finding parameter c
 * critical orbit = forward iteration of critical point
 
-## creating image
+
 
 
 
@@ -164,11 +174,11 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 
 
-| n | period | time|
-| --------: | --------: | --------: |
-|  1   |    10| |
-|  2   |    100| | 
-|  3 | 1000| |
+|        n| period | time|
+|--------:| --------: | --------: |
+|      1  |    10| |
+|      2  |    100| | 
+|      3  | 1000| |
 
 
 
@@ -176,16 +186,16 @@ Time ( for periods 1-7) is proportional to i_Max_multiplier :
 
 
 | i_Max_multiplier | time(1-7)|
-| --------: |  --------: |
-|  1   |    0m0| 
-|  10   |    0m2| 
-|  100 | 0m27,| 
-| 1000 | 4m45|
-| 10000 | |
+|        --------: |--------: |
+|                1 |      0m00| 
+|               10 |      0m20| 
+|              100 |      0m27| 
+|             1000 |      4m45|
+|            10000 |     47m00|
 
 
 ## errors
-* for i_Max_multiplier = 1 ther is no errors
+* for i_Max_multiplier = 1 ther are no errors
 * for i_Max_multiplier = 10 there is 1 error: for n =  9 error from  PlotPoint function : point z =  (-0.4365786152835205 ; -0.1839796132996155) is out of drawing rectangle ;  error from DrawCriticalOrbit for i = 999999998 
 * for i_Max_multiplier = 100 there are 2 errors: above and for n =  8 error from  PlotPoint function : point z =  (+0.2509611384621441 ; +0.1911010034353226) is out of drawing rectangle; error from DrawCriticalOrbit for i = 199999993 
 * for i_Max_multiplier = 1000 there are 2 errors: the same as above

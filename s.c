@@ -65,6 +65,7 @@ double AspectRatio; // width : height  https://en.wikipedia.org/wiki/Aspect_rati
 
 /* world ( double) coordinate = dynamic plane */
 // center and radius : https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/plane#radius
+// the same place for all images for possible animation 
 complex double center = -0.250000000000000  +0.433012701892219*I; // alfa fixed point
 double radius = 0.45; 
 
