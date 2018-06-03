@@ -58,7 +58,7 @@ Names: n_{i_Max_multiplier}.png
 
 
 
-![7_10000.png](7_10000.png)  
+![7_10000.png](7_10000.png)![7_100000.png](7_100000.png)![7_1000000.png](7_1000000.png)    
 
 Image above is 7_10000.png. From it's name one can read:
 * n=7 
@@ -69,7 +69,7 @@ so  number of point on the image i_Max is
 
 i_Max =  10^4 * 10^7 = 100 000 000 000 = 10^11
 
-![7_100000.png](7_100000.png)  
+
 
 Image above is 7_100000.png. From it's name one can read:
 * n=7 
@@ -82,7 +82,7 @@ i_Max =  10^5 * 10^7 = 1 000 000 000 000 = 10^12
 
 
 
-![7_1000000.png](7_1000000.png)  
+
 
 Image above is 7_1000000.png. From it's name one can read:
 * n=7 
