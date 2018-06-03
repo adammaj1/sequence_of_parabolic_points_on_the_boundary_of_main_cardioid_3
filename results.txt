@@ -9,6 +9,12 @@ Rectangle of the dynamic plane description:
 	center z = (-0.2500000000000000 ; 0.4330127018922190) and radius = 0.4500000000000000
 
 	corners :-0.7000000000000000 < creal(z) < 0.2000000000000000 and -0.0169872981077810 < cimag(z) < 0.8830127018922190
+	
+	
+	
+	
+	
+	
 
 i_Max_multiplier = 1000 
 Image Width = 0.900000 
@@ -78,6 +84,57 @@ real	2m34,283s
 user	2m34,283s
 sys	0m0,004s
 
+
+
+i_Max_multiplier = 100000 
+Image Width = 0.900000 
+PixelWidth = 0.000901 
+Aspect ratio of image  = 1.0000000000000000
+for n =  1  p/q =        3 /       10  	t =  0.3000000000000000		c = (+0.0477457514062632 ; +0.6224745712206950)	number of point to draw = i_Max = q*i_Max_multiplier = 1000000
+File 1_100000.pgm saved.  comment =   
+for n =  2  p/q =       33 /      100  	t =  0.3300000000000000		c = (-0.1069201383061086 ; +0.6492353213974356)	number of point to draw = i_Max = q*i_Max_multiplier = 10000000
+File 2_100000.pgm saved.  comment =   
+for n =  3  p/q =      333 /     1000  	t =  0.3330000000000000		c = (-0.1231867522608051 ; +0.6495162048804539)	number of point to draw = i_Max = q*i_Max_multiplier = 100000000
+File 3_100000.pgm saved.  comment =   
+for n =  4  p/q =     3333 /    10000  	t =  0.3333000000000000		c = (-0.1248186255500050 ; +0.6495190243483838)	number of point to draw = i_Max = q*i_Max_multiplier = 1000000000
+File 4_100000.pgm saved.  comment =   
+for n =  5  p/q =    33333 /   100000  	t =  0.3333300000000000		c = (-0.1249818620611921 ; +0.6495190525534192)	number of point to draw = i_Max = q*i_Max_multiplier = 10000000000
+File 5_100000.pgm saved.  comment =   
+for n =  6  p/q =   333333 /  1000000  	t =  0.3333330000000000		c = (-0.1249981862011840 ; +0.6495190528354798)	number of point to draw = i_Max = q*i_Max_multiplier = 100000000000
+File 6_100000.pgm saved.  comment =   
+for n =  7  p/q =  3333333 / 10000000  	t =  0.3333333000000000		c = (-0.1249998186200689 ; +0.6495190528383005)	number of point to draw = i_Max = q*i_Max_multiplier = 1000000000000
+File 7_100000.pgm saved.  comment =   
+
+real	260m39,629s
+user	260m39,377s
+sys	0m0,184s
+
+
+
+
+
+i_Max_multiplier = 1000000 
+Image Width = 0.900000 
+PixelWidth = 0.000901 
+Aspect ratio of image  = 1.0000000000000000
+for n =  1  p/q =        3 /       10  	t =  0.3000000000000000		c = (+0.0477457514062632 ; +0.6224745712206950)	i_Max = q*i_Max_multiplier = 10000000
+File 1_1000000.pgm saved.  comment =  
+for n =  2  p/q =       33 /      100  	t =  0.3300000000000000		c = (-0.1069201383061086 ; +0.6492353213974356)	i_Max = q*i_Max_multiplier = 100000000
+File 2_1000000.pgm saved.  comment =  
+for n =  3  p/q =      333 /     1000  	t =  0.3330000000000000		c = (-0.1231867522608051 ; +0.6495162048804539)	i_Max = q*i_Max_multiplier = 1000000000
+File 3_1000000.pgm saved.  comment =  
+for n =  4  p/q =     3333 /    10000  	t =  0.3333000000000000		c = (-0.1248186255500050 ; +0.6495190243483838)	i_Max = q*i_Max_multiplier = 10000000000
+File 4_1000000.pgm saved.  comment =  
+for n =  5  p/q =    33333 /   100000  	t =  0.3333300000000000		c = (-0.1249818620611921 ; +0.6495190525534192)	i_Max = q*i_Max_multiplier = 100000000000
+File 5_1000000.pgm saved.  comment =  
+for n =  6  p/q =   333333 /  1000000  	t =  0.3333330000000000		c = (-0.1249981862011840 ; +0.6495190528354798)	i_Max = q*i_Max_multiplier = 1000000000000
+File 6_1000000.pgm saved.  comment =  
+for n =  7  p/q =  3333333 / 10000000  	t =  0.3333333000000000		c = (-0.1249998186200689 ; +0.6495190528383005)	i_Max = q*i_Max_multiplier = 10000000000000
+File 7_1000000.pgm saved.  comment =  
+
+real	2556m39,177s
+user	2556m38,984s
+sys	0m0,852s
 
 
 

@@ -12,8 +12,19 @@
 
 
 # Intro	
-* sequence of rational proper fractions ( on the real axis )
-* sequence of parabolic points c on the boundary of main cardioid tending to 1/3 ( on the parameter plane)
+
+
+# Basic facts
+* [the evolution function]() of the discrete dynamical system is complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* critical orbit is the forward orbit of the critical point $`z = 0`$ 
+* critical orbit determines the structure of filled Julia set
+* structure of critical orbit is determined by the rotational number ( internal angle) t, its value and type  
+
+
+
+## Sequences
+* sequence of [rational proper fractions t](README.md#give_t) ( on the real axis )
+* sequence of [parabolic points c](README.md#give_c) on the boundary of main cardioid tending to 1/3 ( on the parameter plane)
 * sequence of critical orbits ( on the dynamic plane)
 
 see also :
@@ -24,6 +35,24 @@ see also :
 * [parabolic rays landing on fixed point](https://commons.wikimedia.org/wiki/File:Parabolic_rays_landing_on_fixed_point.ogv)
 
 
+## Key words
+* sequence
+* complex number
+* discrete dynamical system 
+  * local dynamics near fixed point
+* iteration
+* complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* parameter plane of dynamical system
+* Mandelbrot set
+  * boundary of hyperbolic component
+  * parabolic point = root point
+* dynamic plan of dynamical system  
+  * critical point 
+  * critical orbit  
+* pgm graphic file
+  * [Netpbm format in wikipedia](https://en.wikipedia.org/wiki/Netpbm_format)
+  * [pgm file in wikibooks](https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/gfile#pgm)
+
 # Images
 Names: n_{i_Max_multiplier}.png
 
@@ -33,29 +62,43 @@ Names: n_{i_Max_multiplier}.png
 
 Image above is 7_10000.png. From it's name one can read:
 * n=7 
-* i_Max_multiplier = 10 000
-* number of arms is iPeriodChild = q = 10 000 000
+* i_Max_multiplier = 10 000 = 10^4
+* number of arms is iPeriodChild = q = 10 000 000 = 10^7
 
 so  number of point on the image i_Max is 
 
-i_Max =  10 000 000 * 10 000 = 100 000 000 000 = 10^11
+i_Max =  10^4 * 10^7 = 100 000 000 000 = 10^11
 
 ![7_100000.png](7_100000.png)  
 
 Image above is 7_100000.png. From it's name one can read:
 * n=7 
-* i_Max_multiplier = 100 000
-* number of arms is iPeriodChild = q = 10 000 000
+* i_Max_multiplier = 100 000 = 10^5
+* number of arms is iPeriodChild = q = 10 000 000 = 10^7
 
 so  number of point on the image i_Max is 
 
-i_Max =  100 000 * 10 000 000 = 1000 000 000 000 = 10^12
+i_Max =  10^5 * 10^7 = 1 000 000 000 000 = 10^12
+
+
+
+![7_1000000.png](7_1000000.png)  
+
+Image above is 7_1000000.png. From it's name one can read:
+* n=7 
+* i_Max_multiplier = 1000 000 = 10^6
+* number of arms is iPeriodChild = q = 10 000 000 = 10^7
+
+so  number of point on the image i_Max is 
+
+i_Max =  10^6 * 10^7 = 10 000 000 000 000 = 10^13
+
 
 # algorithms
-* creating image
-* finding parameter c
-* complex quadratic polynomial $`f_c(z) = z^2 + c `$
-* critical orbit = forward iteration of critical point $`z = 0`$ 
+* choose parameter t
+* find parameter c
+* compute critical orbit
+* save orbit to the file ( pgm)
 
 
 ## creating images
@@ -218,24 +261,32 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 
 
-|        n| period | time|
-|--------:| --------: | --------: |
-|      1  |    10| |
-|      2  |    100| | 
-|      3  | 1000| |
 
 
+Time for periods 1-7 
+* for 1-4 without gcc optimisation 
+* for 
+is proportional to i_Max_multiplier and q
 
-Time ( for periods 1-7) without gcc optimisation is proportional to i_Max_multiplier : 
+```c
+\\from give_t function 
+iPeriodChild = q; // = 10000000 = 10^7
+i_Max = iPeriodChild*i_Max_multiplier;
+```
 
 
-| i_Max_multiplier | time(1-7)|
-|        --------: |--------: |
-|                1 |      0m00| 
-|               10 |      0m20| 
-|              100 |      0m27| 
-|             1000 |      4m45|
-|            10000 |     47m00|
+| i_Max_multiplier | i_max(q=7) |  time(1-7)  | time(1-7)	|
+|        --------: |--------: 	| --------:   |--------: 	|
+|             10^0 |   	10^7	|   	  0m00| 		|
+|             10^1 |  	10^8	|  	  0m10| 		|
+|             10^2 |   	10^9	|   	  0m15| 		|
+|             10^3 |   	10^10	|	  2m36| 		|
+|             10^4 |   	10^11	| 	 47m00| 		|
+|             10^5 |   	10^12	|	260m39|        4.5 hours|
+|             10^6 |  	10^13	|      2556m39| 1.8 days |
+|             10^7 |   	10^14	|      	      | 18 days (aprox)|
+|             10^8 |   	10^15	|             | half a year ( aprox) |
+
 
 
 ### gcc optimisation
