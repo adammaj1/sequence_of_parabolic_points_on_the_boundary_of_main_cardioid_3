@@ -33,7 +33,7 @@ see also :
 * [images of critical orbit from commons](https://commons.wikimedia.org/wiki/Category:Critical_orbits)
 * [Repelling and attracting directions](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/r_a_directions)
 * [parabolic rays landing on fixed point](https://commons.wikimedia.org/wiki/File:Parabolic_rays_landing_on_fixed_point.ogv)
-
+* [math.stackexchange question: what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic](https://math.stackexchange.com/questions/469268/what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic)
 
 ## Key words
 * sequence
@@ -269,7 +269,7 @@ Time for periods 1-7
 is proportional to i_Max_multiplier and q
 
 ```c
-\\from give_t function 
+//from give_t function 
 iPeriodChild = q; // = 10000000 = 10^7
 i_Max = iPeriodChild*i_Max_multiplier;
 ```
@@ -299,7 +299,7 @@ i_Max = iPeriodChild*i_Max_multiplier;
 
 
 ## errors
-* for i_Max_multiplier = 1 ther are no errors
+* for i_Max_multiplier = 1 there are no errors
 * for i_Max_multiplier = 10 there is 1 error: for n =  9 error from  PlotPoint function : point z =  (-0.4365786152835205 ; -0.1839796132996155) is out of drawing rectangle ;  error from DrawCriticalOrbit for i = 999999998 
 * for i_Max_multiplier = 100 there are 2 errors: above and for n =  8 error from  PlotPoint function : point z =  (+0.2509611384621441 ; +0.1911010034353226) is out of drawing rectangle; error from DrawCriticalOrbit for i = 199999993 
 * for i_Max_multiplier = 1000 there are 2 errors: the same as above
@@ -335,3 +335,8 @@ git add .
 git commit -m "Initial commit"
 git push -u origin master
 ```
+
+
+
+local repo : ~/c/julia/parabolic/1over3/sequence2$ 
+
