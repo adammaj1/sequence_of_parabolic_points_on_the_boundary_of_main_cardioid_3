@@ -54,6 +54,9 @@ see also :
   * [pgm file in wikibooks](https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/gfile#pgm)
 
 # Images
+
+Images of the parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+
 Names: n_{i_Max_multiplier}.png
 
 
