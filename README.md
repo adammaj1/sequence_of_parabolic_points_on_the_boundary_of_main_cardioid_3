@@ -1,4 +1,4 @@
-
+Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
 
 # TOC
 * [Intro](README.md#intro)
