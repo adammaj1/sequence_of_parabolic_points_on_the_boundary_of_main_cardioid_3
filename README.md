@@ -1,29 +1,7 @@
 Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) for the sequence of rotation numbers tending to 1/3
 
-```bash
-for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000 
-for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000 
-for n =  3  p/q =                333 /               1000  	t =  0.3330000000000000 
-for n =  4  p/q =               3333 /              10000  	t =  0.3333000000000000 
-for n =  5  p/q =              33333 /             100000  	t =  0.3333300000000000 
-for n =  6  p/q =             333333 /            1000000  	t =  0.3333330000000000 
-for n =  7  p/q =            3333333 /           10000000  	t =  0.3333333000000000 
-for n =  8  p/q =           33333333 /          100000000  	t =  0.3333333300000000 
-for n =  9  p/q =          333333333 /         1000000000  	t =  0.3333333330000000 
-for n = 10  p/q =         3333333333 /        10000000000  	t =  0.3333333333000000 
-for n = 11  p/q =        33333333333 /       100000000000  	t =  0.3333333333300000 
-for n = 12  p/q =       333333333333 /      1000000000000  	t =  0.3333333333330000 
-for n = 13  p/q =      3333333333333 /     10000000000000  	t =  0.3333333333333000 
-for n = 14  p/q =     33333333333333 /    100000000000000  	t =  0.3333333333333300 
-for n = 15  p/q =    333333333333333 /   1000000000000000  	t =  0.3333333333333330 
-for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333333 
-.........
-
-	    p/q =  1/3 						t = 0.33333333333333333	
-```
 
 # TOC
-* [Intro](README.md#intro)
 * [images](README.md#images)
 * [algorithms](README.md#algorithms)
 * [functions](README.md#functions)
@@ -32,49 +10,6 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 * [Licence](README.md#licence)
 * [Technical notes](README.md#technical-notes)
 
-
-
-# Intro	
-
-
-# Basic facts
-* [the evolution function]() of the discrete dynamical system is complex quadratic polynomial $`f_c(z) = z^2 + c `$
-* critical orbit is the forward orbit of the critical point $`z = 0`$ 
-* critical orbit determines the structure of filled Julia set
-* structure of critical orbit is determined by the rotational number ( internal angle) t, its value and type  
-
-
-
-## Sequences
-* sequence of [rational proper fractions t](README.md#give_t) ( on the real axis )
-* sequence of [parabolic points c](README.md#give_c) on the boundary of main cardioid tending to 1/3 ( on the parameter plane)
-* sequence of critical orbits ( on the dynamic plane)
-
-see also :
-* [wikibooks](https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabolic_points_on_the_boundary_of_main_cardioid)
-* [definition of critical orbit ](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/def_cqp#Critical_2)
-* [images of critical orbit from commons](https://commons.wikimedia.org/wiki/Category:Critical_orbits)
-* [Repelling and attracting directions](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/r_a_directions)
-* [parabolic rays landing on fixed point](https://commons.wikimedia.org/wiki/File:Parabolic_rays_landing_on_fixed_point.ogv)
-* [math.stackexchange question: what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic](https://math.stackexchange.com/questions/469268/what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic)
-
-## Key words
-* sequence
-* complex number
-* discrete dynamical system 
-  * local dynamics near fixed point
-* iteration
-* complex quadratic polynomial $`f_c(z) = z^2 + c `$
-* parameter plane of dynamical system
-* Mandelbrot set
-  * boundary of hyperbolic component
-  * parabolic point = root point
-* dynamic plan of dynamical system  
-  * critical point 
-  * critical orbit  
-* pgm graphic file
-  * [Netpbm format in wikipedia](https://en.wikipedia.org/wiki/Netpbm_format)
-  * [pgm file in wikibooks](https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/gfile#pgm)
 
 # Images
 
@@ -125,6 +60,76 @@ so  number of point on the image i_Max is
 i_Max =  10^6 * 10^7 = 10 000 000 000 000 = 10^13
 
 
+
+
+```bash
+for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000 
+for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000 
+for n =  3  p/q =                333 /               1000  	t =  0.3330000000000000 
+for n =  4  p/q =               3333 /              10000  	t =  0.3333000000000000 
+for n =  5  p/q =              33333 /             100000  	t =  0.3333300000000000 
+for n =  6  p/q =             333333 /            1000000  	t =  0.3333330000000000 
+for n =  7  p/q =            3333333 /           10000000  	t =  0.3333333000000000 
+for n =  8  p/q =           33333333 /          100000000  	t =  0.3333333300000000 
+for n =  9  p/q =          333333333 /         1000000000  	t =  0.3333333330000000 
+for n = 10  p/q =         3333333333 /        10000000000  	t =  0.3333333333000000 
+for n = 11  p/q =        33333333333 /       100000000000  	t =  0.3333333333300000 
+for n = 12  p/q =       333333333333 /      1000000000000  	t =  0.3333333333330000 
+for n = 13  p/q =      3333333333333 /     10000000000000  	t =  0.3333333333333000 
+for n = 14  p/q =     33333333333333 /    100000000000000  	t =  0.3333333333333300 
+for n = 15  p/q =    333333333333333 /   1000000000000000  	t =  0.3333333333333330 
+for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333333 
+.........
+
+	    p/q =  1/3 						t = 0.33333333333333333	
+```
+
+
+
+	
+
+
+# Basic facts
+* [the evolution function]() of the discrete dynamical system is complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* critical orbit is the forward orbit of the critical point $`z = 0`$ 
+* critical orbit determines the structure of filled Julia set
+* structure of critical orbit is determined by the rotational number ( internal angle) t, its value and type  
+
+
+
+## Sequences
+* sequence of [rational proper fractions t](README.md#give_t) ( on the real axis )
+* sequence of [parabolic points c](README.md#give_c) on the boundary of main cardioid tending to 1/3 ( on the parameter plane)
+* sequence of critical orbits ( on the dynamic plane)
+
+see also :
+* [wikibooks](https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabolic_points_on_the_boundary_of_main_cardioid)
+* [definition of critical orbit ](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/def_cqp#Critical_2)
+* [images of critical orbit from commons](https://commons.wikimedia.org/wiki/Category:Critical_orbits)
+* [Repelling and attracting directions](https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/r_a_directions)
+* [parabolic rays landing on fixed point](https://commons.wikimedia.org/wiki/File:Parabolic_rays_landing_on_fixed_point.ogv)
+* [math.stackexchange question: what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic](https://math.stackexchange.com/questions/469268/what-is-the-shape-of-external-rays-landing-on-fixed-points-in-case-of-quadratic)
+
+## Key words
+* sequence
+* complex number
+* discrete dynamical system 
+  * local dynamics near fixed point
+* iteration
+* complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* parameter plane of dynamical system
+* Mandelbrot set
+  * boundary of hyperbolic component
+  * parabolic point = root point
+* dynamic plan of dynamical system  
+  * critical point 
+  * critical orbit  
+* pgm graphic file
+  * [Netpbm format in wikipedia](https://en.wikipedia.org/wiki/Netpbm_format)
+  * [pgm file in wikibooks](https://en.wikibooks.org/wiki/Fractals/Computer_graphic_techniques/2D/gfile#pgm)
+
+
+
 # algorithms
 * choose parameter t
 * find parameter c
@@ -171,7 +176,7 @@ $`t_n = \sum_{ k \mathop =1}^n \frac{3}{10^k}`$
 
 t is aproximating 1/3  
 
-Here is first 10 values of c
+Here are the first 10 values of c
 
 ![t_10.png](t_10.png)
 
@@ -354,7 +359,7 @@ Solutions:
 
 
 
-## Files
+# Files
 * [m.mac](m.mac) - Maxima CAS file for computing and drawing t
 
 
