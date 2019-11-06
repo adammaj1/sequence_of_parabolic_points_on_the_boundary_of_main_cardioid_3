@@ -1,4 +1,4 @@
-Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) for the sequence of rotation numbers tending to 1/3
+Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) for the sequence of rotation numbers tending to 1/3, with periods : 10, 100, 1000, ..., 10^n
 
 
 # TOC
@@ -14,6 +14,25 @@ Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia
 # Images
 
 Images of the parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+
+period = 10^1 = 10 , t = 3/10  
+![1_1000000.png](1_1000000.png)  
+
+period = 10^2 = 100   
+
+![2_1000000.png](2_1000000.png)  
+
+period = 10^3 = 1000  
+![3_1000000.png](3_1000000.png)  
+
+period = 10^4 = 10000  
+![4_1000000.png](4_1000000.png)  
+
+![5_1000000.png](5_1000000.png)  
+
+![6_1000000.png](6_1000000.png)  
+
+![7_1000000.png](7_1000000.png)
 
 
 
