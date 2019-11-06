@@ -41,7 +41,9 @@ git push -u origin master
 
 double i_Max ; // Number of points to draw = iPeriodChild*i_Max_multiplier; see setup 
 unsigned long long int i_Max_multiplier =  1000; //00000; 
-
+// ratio t =  p/q
+long long  int p = 3; // numerator of t
+long long int q = 10; // denominator of t
 
 
 
@@ -108,9 +110,9 @@ https://en.wikibooks.org/wiki/Fractals/Mathematics/sequences#sequence_of_parabol
 double Give_t(int nMax){
 
 	double t = 0.0; // = p/q 
-	// ratio
-	long long  int p = 3; // numerator of t
-	long long int q = 10; // denominator of t
+	// ratio t =  p/q
+	p = 3; // numerator of t
+	q = 10; // denominator of t
 	
 	int n = 1;
 	
@@ -120,7 +122,7 @@ double Give_t(int nMax){
 	// bounds check 
 	if (nMax < 1) {printf(" error nMax < 1 \n"); return t;}
 	if (nMax > 20) {printf(" error nMax > 20 \n"); return t;}
-	
+	// compute q 
 	while ( n< nMax){
 		
 		p = p + 3*q;
@@ -136,9 +138,7 @@ double Give_t(int nMax){
 	t = (double)p/q; // compute floating point value 
 	printf( "for n = %2d  p/q = %8Ld / %8Ld  \tt =  %.16f\t",n, p, q, t); 
 	
-	// !!!! global variable setup for each n 
-	iPeriodChild = q; 
-	i_Max = iPeriodChild*i_Max_multiplier;
+	
 	
 	// !!!!!
 	
@@ -167,7 +167,7 @@ complex double Give_c(  double InternalAngleInTurns )
   // main cardioid
   c = w/2 - w*w/4;
   printf("\tc = (%+.16f ; %+.16f)",creal(c), cimag(c)); 
-  printf("\tnumber of point to draw = i_Max = q*i_Max_multiplier = %.0f\n", i_Max);
+  printf("\ti_Max = q*i_Max_multiplier = %.0f\n", i_Max);
   return c;
 }
 
@@ -262,14 +262,17 @@ int SaveArray2PGMFile( unsigned char A[], int n, unsigned long long int  i_Max_m
   
   //
   printf("File %s saved. ", filename);
-  if (comment == NULL)  printf ("empty comment \n");
-                   else printf (" comment = %s \n", comment); 
+  if (comment != NULL)  
+  	printf (" comment = %s \n", comment); 
+  	else printf ("\n"); 
   fclose(fp);
 
   return 0;
 }
 
 
+
+// ?? n 
 int DrawCriticalOrbit(int n, unsigned char A[]){
 
 	double i;
@@ -309,13 +312,34 @@ int MakeImage(int n){
 	
 	DrawCriticalOrbit( n, image);
 	
-	SaveArray2PGMFile( image, n, i_Max_multiplier, " ",  iWidth, iHeight, iSize );
+	SaveArray2PGMFile( image, n, i_Max_multiplier, "",  iWidth, iHeight, iSize );
 	return 0;
 }
 
 
 
 
+/* draw to the array and save it to pgm image */
+int MakeLastImage(){
+
+	double t;
+	
+	
+	int n = 3;
+	p = 1;
+	q = 3;
+	t = (double) p /q;
+	c = Give_c(t);
+	i_Max = (double) q*i_Max_multiplier;
+
+	ClearArray(image);
+	// draw
+	
+	DrawCriticalOrbit( n, image);
+	
+	SaveArray2PGMFile( image, -1, i_Max_multiplier, "",  iWidth, iHeight, iSize );
+	return 0;
+}
 
 
 
@@ -351,6 +375,10 @@ int setup(){
   	SetPlane( center, radius);
 	PixelWidth = (ZxMax-ZxMin)/ixMax;
 	PixelHeight = (ZyMax-ZyMin)/iyMax;
+	//
+	// !!!! global variable setup for each n 
+	iPeriodChild = q; // = 10^n
+	i_Max = iPeriodChild*i_Max_multiplier;
 	
 	
 	/* create dynamic 1D arrays for colors ( shades of gray ) */
@@ -381,6 +409,7 @@ int main()
 		
 	for (n = 1; n < 8; n++)
 		MakeImage( n);
+	MakeLastImage();
 	 	
   
 

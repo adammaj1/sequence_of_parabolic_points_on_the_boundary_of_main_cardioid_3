@@ -34,6 +34,9 @@ period = 10^4 = 10000
 
 ![7_1000000.png](7_1000000.png)
 
+period = 3  
+
+![-1_100000000.pgm](-1_100000000.pgm)
 
 
 
@@ -157,6 +160,17 @@ There are :
 
 transformations:
 * world to screen: z -> (ix,iy) -> i
+
+## Viewport
+
+```bash
+Rectangle of the dynamic plane description:
+center z = (-0.2500000000000000 ; 0.4330127018922190) and radius = 0.4500000000000000
+corners :-0.7000000000000000 < creal(z) < 0.2000000000000000 and -0.0169872981077810 < cimag(z) < 0.8830127018922190
+Image Width = 0.900000 
+PixelWidth = 0.000901 
+Aspect ratio of image  = 1.0000000000000000
+```
 
 
 ## critical orbit
