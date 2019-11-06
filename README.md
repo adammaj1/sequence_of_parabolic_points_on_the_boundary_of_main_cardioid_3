@@ -1,4 +1,26 @@
-Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
+Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial) for the sequence of rotation numbers tending to 1/3
+
+```bash
+for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000 
+for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000 
+for n =  3  p/q =                333 /               1000  	t =  0.3330000000000000 
+for n =  4  p/q =               3333 /              10000  	t =  0.3333000000000000 
+for n =  5  p/q =              33333 /             100000  	t =  0.3333300000000000 
+for n =  6  p/q =             333333 /            1000000  	t =  0.3333330000000000 
+for n =  7  p/q =            3333333 /           10000000  	t =  0.3333333000000000 
+for n =  8  p/q =           33333333 /          100000000  	t =  0.3333333300000000 
+for n =  9  p/q =          333333333 /         1000000000  	t =  0.3333333330000000 
+for n = 10  p/q =         3333333333 /        10000000000  	t =  0.3333333333000000 
+for n = 11  p/q =        33333333333 /       100000000000  	t =  0.3333333333300000 
+for n = 12  p/q =       333333333333 /      1000000000000  	t =  0.3333333333330000 
+for n = 13  p/q =      3333333333333 /     10000000000000  	t =  0.3333333333333000 
+for n = 14  p/q =     33333333333333 /    100000000000000  	t =  0.3333333333333300 
+for n = 15  p/q =    333333333333333 /   1000000000000000  	t =  0.3333333333333330 
+for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333333 
+.........
+
+	    p/q =  1/3 						t = 0.33333333333333333	
+```
 
 # TOC
 * [Intro](README.md#intro)
@@ -61,7 +83,11 @@ Names: n_{i_Max_multiplier}.png
 
 
 
-![7_10000.png](7_10000.png)![7_100000.png](7_100000.png)![7_1000000.png](7_1000000.png)    
+![7_10000.png](7_10000.png)
+
+
+
+
 
 Image above is 7_10000.png. From it's name one can read:
 * n=7 
@@ -73,6 +99,7 @@ so  number of point on the image i_Max is
 i_Max =  10^4 * 10^7 = 100 000 000 000 = 10^11
 
 
+![7_100000.png](7_100000.png)
 
 Image above is 7_100000.png. From it's name one can read:
 * n=7 
@@ -84,7 +111,7 @@ so  number of point on the image i_Max is
 i_Max =  10^5 * 10^7 = 1 000 000 000 000 = 10^12
 
 
-
+![7_1000000.png](7_1000000.png)    
 
 
 Image above is 7_1000000.png. From it's name one can read:
@@ -132,11 +159,23 @@ i_Max = iPeriodChild*i_Max_multiplier;
 # functions
 
 ## Give_t
+
+
 t is:
 * internal angle or rotational number
 * measured in turns ( proper fraction )
 
-$`t = \sum_{ k \mathop =1}^n \frac{3}{10^k}`$
+$`t_n = \sum_{ k \mathop =1}^n \frac{3}{10^k}`$
+
+
+t is aproximating 1/3  
+
+Here is first 10 values of c
+
+![t_10.png](t_10.png)
+
+
+
 
 
 
@@ -313,6 +352,13 @@ Solutions:
 * use higher precision ( long double, quad double, arbitrary )
 
 
+
+## Files
+* [t.mac](t.mac) - Maxima CAS file for computing and drawing t
+
+
+
+
 # License
 
 This project is licensed under the  Creative Commons Attribution-ShareAlike 4.0 International License - see the [LICENSE.md](LICENSE.md) file for details  
@@ -341,5 +387,5 @@ git push -u origin master
 
 
 
-local repo : ~/c/julia/parabolic/1over3/sequence2$ 
+local repo : ~/c/julia/parabolic/1over3/sequence2/ 
 
