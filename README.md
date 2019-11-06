@@ -28,6 +28,7 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 * [algorithms](README.md#algorithms)
 * [functions](README.md#functions)
 * [results](README.md#results)
+* files
 * [Licence](README.md#licence)
 * [Technical notes](README.md#technical-notes)
 
@@ -354,7 +355,7 @@ Solutions:
 
 
 ## Files
-* [t.mac](t.mac) - Maxima CAS file for computing and drawing t
+* [m.mac](m.mac) - Maxima CAS file for computing and drawing t
 
 
 
