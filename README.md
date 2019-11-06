@@ -15,7 +15,18 @@ Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia
 
 Images of the parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
 
+
+
+
+## How to read image name ?
+
 Names: n_{i_Max_multiplier}.png
+
+See c code :
+
+```c
+ snprintf(name, sizeof name, "%d_%Ld", n, i_Max_multiplier); /*  */
+ ```
 
 
 
@@ -62,27 +73,6 @@ i_Max =  10^6 * 10^7 = 10 000 000 000 000 = 10^13
 
 
 
-```bash
-for n =  1  p/q =                  3 /                 10  	t =  0.3000000000000000 
-for n =  2  p/q =                 33 /                100  	t =  0.3300000000000000 
-for n =  3  p/q =                333 /               1000  	t =  0.3330000000000000 
-for n =  4  p/q =               3333 /              10000  	t =  0.3333000000000000 
-for n =  5  p/q =              33333 /             100000  	t =  0.3333300000000000 
-for n =  6  p/q =             333333 /            1000000  	t =  0.3333330000000000 
-for n =  7  p/q =            3333333 /           10000000  	t =  0.3333333000000000 
-for n =  8  p/q =           33333333 /          100000000  	t =  0.3333333300000000 
-for n =  9  p/q =          333333333 /         1000000000  	t =  0.3333333330000000 
-for n = 10  p/q =         3333333333 /        10000000000  	t =  0.3333333333000000 
-for n = 11  p/q =        33333333333 /       100000000000  	t =  0.3333333333300000 
-for n = 12  p/q =       333333333333 /      1000000000000  	t =  0.3333333333330000 
-for n = 13  p/q =      3333333333333 /     10000000000000  	t =  0.3333333333333000 
-for n = 14  p/q =     33333333333333 /    100000000000000  	t =  0.3333333333333300 
-for n = 15  p/q =    333333333333333 /   1000000000000000  	t =  0.3333333333333330 
-for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333333 
-.........
-
-	    p/q =  1/3 						t = 0.33333333333333333	
-```
 
 
 
@@ -248,6 +238,9 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 ## Give_c
 
 
+![cardioid+10.png](cardioid_10.png)
+
+
 ```c
 
 /* computes c on the boundary of Main cardioid of Mandelbrot set */
@@ -361,7 +354,8 @@ Solutions:
 
 # Files
 * [m.mac](m.mac) - Maxima CAS file for computing and drawing t
-
+* [c.mac](c.mac) - Maxima CAS file for computing and drawing c
+* [s.c](s.c) - console c program for drawing images of critical orbiits
 
 
 

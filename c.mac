@@ -1,0 +1,109 @@
+/*
+
+
+https://gitlab.com/adammajewski/sequence_of_parabolic_points_on_the_boundary_of_main_cardioid_3
+
+
+batch file for Maxima CAS program
+
+save it as ( a file with mac extension) : m.mac
+and open in Maxima 
+
+
+
+----run from console -------
+maxima
+batch("c.mac");
+
+*/
+
+
+Give_t(iMax):=sum(3/(10^i), i, 1, iMax)$
+
+
+
+
+
+
+GiveC(t):= block(
+	[w, P, c], 
+	w : %e^(%i*t*2*%pi), /* point of unit circle */
+	P : w/2, /* P = w/(2^period) */
+	c: P-P^2 , /* = w/2-w*w/4 ; conformal map  from circle to cardioid ( boundary  of period 1 component of Mandelbrot set */
+	c: float(rectform(c)),
+	return (c)
+
+
+)$
+
+
+
+GivePoints(nMax):=block(
+	[n, t, c, pts],
+	pts:[],
+	for n:1 thru nMax step 1 do (
+		t : Give_t(n),
+		c : GiveC(t),
+		print ("n = ", n, " t = ", t, " c = ", c),
+		pts: cons(c, pts)
+	),
+	return (pts)
+	
+)$
+
+
+/* 
+converts complex number z = x*y*%i 
+to the list in a draw format:  
+[x,y] 
+*/
+d(z):=[float(realpart(z)), float(imagpart(z))]$
+
+ToPoints(myList):= points(map(d,myList))$
+
+
+/* ======= compute ============= */
+
+n:10;
+pts : GivePoints(n)$
+pts : ToPoints(pts)$
+
+
+
+/* --------- draw ------- */
+
+
+ path:"~/c/julia/parabolic/1over3/sequence2/"$ /* result of pwd; to save image in the same directory as mac file  */
+ FileName:concat("cardioid_",string(n))$ /* without extension which is the terminal name */
+
+load(draw);
+
+ 
+ draw2d(
+  	terminal  = 'svg,
+  	file_name = concat(path,FileName),
+  	/* dimensions=[1000,1000],   	*/
+  	title      = "",
+  	font_size = 30,
+  	font = "Liberation Sans", /* https://commons.wikimedia.org/wiki/Help:SVG#Font_substitution_and_fallback_fonts */
+  	nticks        = 200,
+	key = "",
+	
+	/* key="main cardioid", */
+	parametric( cos(t)/2-cos(2*t)/4, sin(t)/2-sin(2*t)/4, t,-%pi,%pi),
+	
+  	
+  	/* points  */
+  	points_joined = false,
+  	xlabel     = "Re(c)",
+  	ylabel     = "Im(c)",
+  	point_type = filled_circle,
+        point_size = 0.5,
+        color = red,
+        pts 
+       
+        )$
+
+
+
+
