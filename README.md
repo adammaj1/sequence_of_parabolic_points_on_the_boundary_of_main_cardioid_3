@@ -16,7 +16,7 @@ Parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia
 Images of the parabolic critical orbits of [complex quadratic polynomial](https://en.wikipedia.org/wiki/Complex_quadratic_polynomial)
 
 period = 10^1 = 10 , t = 3/10  
-![1_1000000.png](1_1000000.png)  
+![1_100000000000.png](1_100000000000.png)  
 
 period = 10^2 = 100   
 
