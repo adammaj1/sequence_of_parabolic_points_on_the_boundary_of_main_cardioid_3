@@ -18,12 +18,12 @@ Images of the parabolic critical orbits of [complex quadratic polynomial](https:
 Let's call this figure n'th arm star ( here n = period )
 
 period = 10^1 = 10 , t = 3/10  
-One can see here star with 10 arms. Arms should end in the center point, but on this image they end before. It is because of lazy dynamics. Compare 3 arm star
+One can see here star with 10 arms. Arms should end in the center point, but on this image they end before. It is because of lazy dynamics. Compare 3 arm star below
 
 ![1_100000000000.png](1_100000000000.png)  
 
 period = 10^2 = 100   
-Here one can see 100 arm star and the hole in the middle is much  bigger
+Here one can see 100 arm star and the hole in the middle is much  bigger and changed it's shape to the curilinear triangle  
 
 
 ![2_1000000.png](2_1000000.png)  
@@ -37,6 +37,9 @@ period = 10^4 = 10000
 ![5_1000000.png](5_1000000.png)  
 
 ![6_1000000.png](6_1000000.png)  
+
+
+Here one can see 10^7 arm star and the hole in the middle has shape of 3 petals flower
 
 ![7_1000000.png](7_1000000.png)
 
