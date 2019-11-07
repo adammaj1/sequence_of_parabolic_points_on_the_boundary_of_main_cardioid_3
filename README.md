@@ -270,8 +270,12 @@ for n = 16  p/q =   3333333333333333 /  10000000000000000  	t =  0.3333333333333
 
 ## Give_c
 
+All values lay on the boudnary of Mandelbrot set's main cardioid
 
-![cardioid+10.png](cardioid_10.png)
+
+![cardioid_10.png](cardioid_10.png)
+
+![cardioid_zoom_10.png](cardioid_zoom_10.png)
 
 
 ```c
