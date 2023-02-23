@@ -138,7 +138,7 @@ see also :
 * discrete dynamical system 
   * local dynamics near fixed point
 * iteration
-* complex quadratic polynomial $`f_c(z) = z^2 + c `$
+* complex quadratic polynomial $f_c(z) = z^2 + c $
 * parameter plane of dynamical system
 * Mandelbrot set
   * boundary of hyperbolic component
@@ -204,7 +204,7 @@ t is:
 * internal angle or rotational number
 * measured in turns ( proper fraction )
 
-$`t_n = \sum_{ k \mathop =1}^n \frac{3}{10^k}`$
+$t_n = \sum_{ k \mathop =1}^n \frac{3}{10^k}$
 
 
 t is aproximating 1/3  
@@ -422,7 +422,7 @@ GitLab uses:
 
 
 
-## Git
+# Git
 ```
 cd existing_folder
 git init
@@ -434,5 +434,45 @@ git push -u origin master
 
 
 
+
+
+
+
 local repo : ~/c/julia/parabolic/1over3/sequence2/ 
+
+
+## Github
+
+create a new repository on the command line
+```
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:adammaj1/sequence_of_parabolic_points_on_the_boundary_of_main_cardioid_3.git
+git push -u origin main
+```
+
+
+## md
+* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+* [md cheat sheet](http://mdcheatsheet.com/)
+* [CommonMark Spec](https://spec.commonmark.org)
+* [Markdown parser ](https://markdown-it.github.io/)
+
+
+## Repo
+
+Change:
+* in general settings
+  * add Social Preview Image ( Images should be at least 640×320px (1280×640px for best display))
+* in repository details ( near About) add
+  * description
+  * website 
+  * Topics (separate with spaces) 
+
+
+## Math equation inside README.md
+* $\sqrt{3x-1}+(1+x)^2$
+
 
