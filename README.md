@@ -204,7 +204,7 @@ t is:
 * internal angle or rotational number
 * measured in turns ( proper fraction )
 
-$t_n = \sum_{ k \mathop =1}^n \frac{3}{10^k}$
+$t_n = \sum_{k=1}^n \frac{3}{10^k}$
 
 
 t is aproximating 1/3  
