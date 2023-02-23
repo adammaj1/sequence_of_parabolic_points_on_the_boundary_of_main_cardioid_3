@@ -112,8 +112,8 @@ i_Max =  10^6 * 10^7 = 10 000 000 000 000 = 10^13
 
 
 # Basic facts
-* [the evolution function]() of the discrete dynamical system is complex quadratic polynomial $`f_c(z) = z^2 + c `$
-* critical orbit is the forward orbit of the critical point $`z = 0`$ 
+* [the evolution function]() of the discrete dynamical system is complex quadratic polynomial $f_c(z) = z^2 + c$
+* critical orbit is the forward orbit of the critical point $z = 0$ 
 * critical orbit determines the structure of filled Julia set
 * structure of critical orbit is determined by the rotational number ( internal angle) t, its value and type  
 
@@ -138,7 +138,7 @@ see also :
 * discrete dynamical system 
   * local dynamics near fixed point
 * iteration
-* complex quadratic polynomial $f_c(z) = z^2 + c $
+* complex quadratic polynomial $f_c(z) = z^2 + c$
 * parameter plane of dynamical system
 * Mandelbrot set
   * boundary of hyperbolic component
