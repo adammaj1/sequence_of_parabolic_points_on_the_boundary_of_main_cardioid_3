@@ -204,7 +204,7 @@ t is:
 * internal angle or rotational number
 * measured in turns ( proper fraction )
 
-$t_n = \sum_{k=1}^n \frac{3}{10^k}$
+$$t_n = \sum_{k=1}^n \frac{3}{10^k}$$
 
 
 t is aproximating 1/3  
@@ -474,5 +474,5 @@ Change:
 
 ## Math equation inside README.md
 * $\sqrt{3x-1}+(1+x)^2$
-
+* [mathjax-basic-tutorial-and-quick-reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
